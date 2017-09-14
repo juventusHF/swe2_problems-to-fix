@@ -8,6 +8,17 @@ public class Main {
 
     public static void main(String [ ] args) {
 
+        // syntax
+
+        // logisch
+
+        // scope
+
+        // third party
+
+
+
+
         // expected exception
 
         // missing / wrong toString impl

@@ -4,7 +4,8 @@ import java.util.Date;
 import java.util.function.BooleanSupplier;
 
 /**
- * Created by t372017 on 14.09.2017.
+ * @author: Linda Krüger
+ * @since: 12.09.17
  */
 public class Person {
 
