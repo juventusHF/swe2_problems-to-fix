@@ -8,50 +8,46 @@ public class Main {
 
     public static void main(String [ ] args) {
 
-        // syntax
-
-        // logisch
-
-        // scope
-
-        // third party
-
-
-
+        // TODO: scope
 
         // expected exception
+        // did 1
 
         // missing / wrong toString impl
         // did 1
 
-        // Parse / Cast Error
+        // TODO: Parse / Cast Error
 
         // calc with primitives
         // did 1
 
         // equals not overwritten
+        // did 1
 
         // i++ / i+1
+        // did 1
 
         // some data just not set / missing code part
+        // did 1
 
-        // nullpointer
+        // TODO: nullpointer
 
         // >= index out of bounds
+        // did 1
 
         // missing library -> hamcrest-all
 
-        // IntelliJ config ?
+        // TODO: IntelliJ config ?
 
-        // method called multiple times / not called / to early / to late
+        // TODO: method called multiple times / not called / to early / to late
 
-        // wrong usage / chosen collections class
+        // TODO: wrong usage / chosen collections class
 
-        // typo in string
+        // TODO: typo in string
 
-        // used wrong variable
+        // TODO: used wrong variable
 
-        // startsWith instead of contains
+        // TODO: startsWith instead of contains
 
     }
 }
