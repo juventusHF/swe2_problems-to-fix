@@ -1,6 +1,6 @@
-package ch.juventus.se.problemstofix;
+package ch.juventus.se.problemstofix.calc;
 
-import ch.juventus.se.problemstofix.Person;
+import ch.juventus.se.problemstofix.calc.Calculations;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,13 +9,13 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by t372017 on 14.09.2017.
  */
-public class PersonTest {
+public class CalculationsTest {
 
-    private Person person;
+    private Calculations c;
 
     @Before
     public void setup () {
-        person = new Person("Hans", "Muster", );
+        c = new Calculations();
     }
 
     @Test
@@ -23,4 +23,5 @@ public class PersonTest {
         double result = c.divide(33, 5.2);
         assertEquals("Result of division not as expected.", 6.35, result);
     }
+
 }
