@@ -1,6 +1,5 @@
 package ch.juventus.se.problemstofix.calc;
 
-import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -16,6 +15,16 @@ public class Calculations {
 //        return Double.valueOf(df2.format(a/b));
 
         return a/b;
+    }
+
+    public Double exponentiate (Double value, int exponent) {
+        Double result = new Double(value);
+
+        for(int i = 0; i < exponent; i++) {
+            result = result*value;
+        }
+
+        return result;
     }
 
     public double countTotal(List<BankAccount> accounts) {

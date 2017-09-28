@@ -57,7 +57,7 @@ public class PersonTest {
 
         assertEquals("First name is not equals", p1.getFirstName(), student.getFirstName());
         assertEquals("Last name is not equals", p1.getLastName(), student.getLastName());
-        assertEquals("Address is not equals", p1.getAddress(), student.getAddress());
+        assertEquals("City is not equals", p1.getAddress(), student.getAddress());
         assertEquals("Birthday is not equals", p1.getBirthday(), student.getBirthday());
     }
 }

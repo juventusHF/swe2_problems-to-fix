@@ -66,4 +66,16 @@ public class CalculationsTest {
         bankAccount.withdraw(160.00);
     }
 
+    @Test
+    public void shouldExponentiate () {
+        Double result = c.exponentiate(new Double(2), 2);
+        assertEquals(new Double(4), result);
+    }
+
+    @Test
+    public void shouldReturnZero () {
+        Double result = c.exponentiate(null, 2);
+        assertEquals(0, result);
+    }
+
 }

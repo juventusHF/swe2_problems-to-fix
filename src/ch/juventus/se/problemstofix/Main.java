@@ -1,5 +1,9 @@
 package ch.juventus.se.problemstofix;
 
+import ch.juventus.se.problemstofix.bird.Bird;
+import ch.juventus.se.problemstofix.bird.Duck;
+import ch.juventus.se.problemstofix.bird.Toucan;
+
 /**
  * @author: Linda Krüger
  * @since: 12.09.17
@@ -7,6 +11,8 @@ package ch.juventus.se.problemstofix;
 public class Main {
 
     public static void main(String [ ] args) {
+
+        // FIXME: birds not used
 
         // TODO: scope
 
@@ -25,17 +31,18 @@ public class Main {
         // did 1
 
         // i++ / i+1
-        // did 1
+        // did 2
 
         // some data just not set / missing code part
         // did 1
 
-        // TODO: nullpointer
+        // nullpointer
+        // did 1
 
         // >= index out of bounds
         // did 1
 
-        // missing library -> hamcrest-all
+        // FIXME: missing library -> hamcrest-all
 
         // TODO: IntelliJ config ?
 

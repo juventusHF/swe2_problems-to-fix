@@ -8,10 +8,11 @@ public abstract class Bird {
 
     private int age;
     private double weight;
+    private boolean isHeathy;
+    private int id;
 
-    public Bird(int age, double weight) {
-        this.age = age;
-        this.weight = weight;
+    public Bird(int id) {
+        this.id = id;
     }
 
     public int getAge() {
@@ -28,5 +29,21 @@ public abstract class Bird {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public boolean isHeathy() {
+        return isHeathy;
+    }
+
+    public void setHeathy(boolean heathy) {
+        isHeathy = heathy;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
