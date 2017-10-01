@@ -46,4 +46,29 @@ public abstract class Bird {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Bird bird = (Bird) o;
+
+        if (age != bird.age) return false;
+        if (Double.compare(bird.weight, weight) != 0) return false;
+        if (isHeathy != bird.isHeathy) return false;
+        return id == bird.id;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = age;
+        temp = Double.doubleToLongBits(weight);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (isHeathy ? 1 : 0);
+        result = 31 * result + id;
+        return result;
+    }
 }

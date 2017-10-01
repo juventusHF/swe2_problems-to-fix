@@ -21,4 +21,22 @@ public class Toucan extends Bird {
     public void setHabitat(String habitat) {
         this.habitat = habitat;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Toucan toucan = (Toucan) o;
+
+        return habitat != null ? habitat.equals(toucan.habitat) : toucan.habitat == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (habitat != null ? habitat.hashCode() : 0);
+        return result;
+    }
 }
