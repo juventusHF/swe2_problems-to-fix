@@ -28,20 +28,18 @@ public class Main {
 
         // typo in string : did 1
 
+        // startsWith instead of contains : did 1
+
+        // missing library
+
         // TODO: Parse / Cast Error
 
         // TODO: scope
 
-        // TODO: method called multiple times / not called / to early / to late
+        // TODO: logical -> method called multiple times / not called / to early / to late
 
         // TODO: used wrong variable
 
-        // TODO: startsWith instead of contains
-
-
-        // FIXME: missing library -> hamcrest-all
-
-        // TODO: IntelliJ config ?
 
         // TODO: Logging ?
 
