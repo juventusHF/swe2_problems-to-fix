@@ -1,13 +1,7 @@
 package ch.juventus.se.problemstofix.bird;
 
-import ch.juventus.se.problemstofix.calc.BankAccount;
-import ch.juventus.se.problemstofix.calc.Calculations;
-import ch.juventus.se.problemstofix.calc.InsufficientFundsException;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static junit.framework.Assert.assertEquals;
 
