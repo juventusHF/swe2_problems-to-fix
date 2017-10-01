@@ -45,4 +45,16 @@ public class PersonController {
 
         return people;
     }
+
+    public List<Person> removeAllWitLetterAInName(List<Person> people) {
+
+        Iterator<Person> iterator = people.iterator();
+        while (iterator.hasNext()) {
+            if(iterator.next().getLastName().toLowerCase().startsWith("a")) {
+                iterator.remove();
+            }
+        }
+
+        return people;
+    }
 }

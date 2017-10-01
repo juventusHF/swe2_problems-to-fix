@@ -76,9 +76,7 @@ public class PersonTest {
         people.add(new Person("Jonathan", null, null, null, null, null, null));
         people.add(new Person("Noel", null, null, null, null, null, null));
 
-        personController.removeAllLindas(people);
-
-        assertEquals("Size of returned list is not as expected", people.size(), 6);
+        assertEquals("Size of returned list is not as expected", 6, personController.removeAllLindas(people).size());
     }
 
     @Test
@@ -92,8 +90,20 @@ public class PersonTest {
         people.add(new Person(null, null, new Date(238460400000l), null, null, null, null));
         people.add(new Person(null, null, new Date(1248300000000l), null, null, null, null));
 
-        personController.removeAllUnderage(people);
+        assertEquals("Size of returned list is not as expected", 4, personController.removeAllUnderage(people).size());
+    }
 
-        assertEquals("Size of returned list is not as expected", 4, people.size());
+    @Test
+    public void shouldRemoveAllWithLetterAInLastName () {
+        List<Person> people = new ArrayList<>();
+        people.add(new Person(null, "Krueger", null, null, null, null, null));
+        people.add(new Person(null, "Frick", null, null, null, null, null));
+        people.add(new Person(null, "Keller", null, null, null, null, null));
+        people.add(new Person(null, "Sovrano", null, null, null, null, null));
+        people.add(new Person(null, "Troxler", null, null, null, null, null));
+        people.add(new Person(null, "Werren", null, null, null, null, null));
+        people.add(new Person(null, "Widmer", null, null, null, null, null));
+
+        assertEquals("Size of returned list is not as expected", 6, personController.removeAllWitLetterAInName(people).size());
     }
 }
