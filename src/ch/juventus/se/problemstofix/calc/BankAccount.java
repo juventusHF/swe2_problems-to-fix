@@ -16,8 +16,6 @@ public class BankAccount {
         if(amount <= balance) {
             balance -= amount;
         } else {
-            // Solution:
-            //throw new InsufficientFundsException(amount-balance);
             System.out.println("Insufficient funds! " + (amount-balance));
         }
     }
