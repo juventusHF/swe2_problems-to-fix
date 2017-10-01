@@ -86,46 +86,4 @@ public class Person {
         this.hasKids = hasKids;
     }
 
-    // Solution
-//    @Override
-//    public String toString() {
-//        return "Person{" +
-//                "firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", birthday=" + birthday +
-//                ", address=" + address +
-//                ", balance=" + balance +
-//                ", sex=" + sex +
-//                ", hasKids=" + hasKids +
-//                '}';
-//    }
-
-    //Solution
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        Person person = (Person) o;
-//
-//        if (firstName != null ? !firstName.equals(person.firstName) : person.firstName != null) return false;
-//        if (lastName != null ? !lastName.equals(person.lastName) : person.lastName != null) return false;
-//        if (birthday != null ? !birthday.equals(person.birthday) : person.birthday != null) return false;
-//        if (address != null ? !address.equals(person.address) : person.address != null) return false;
-//        if (balance != null ? !balance.equals(person.balance) : person.balance != null) return false;
-//        if (sex != person.sex) return false;
-//        return hasKids != null ? hasKids.equals(person.hasKids) : person.hasKids == null;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = firstName != null ? firstName.hashCode() : 0;
-//        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-//        result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
-//        result = 31 * result + (address != null ? address.hashCode() : 0);
-//        result = 31 * result + (balance != null ? balance.hashCode() : 0);
-//        result = 31 * result + (sex != null ? sex.hashCode() : 0);
-//        result = 31 * result + (hasKids != null ? hasKids.hashCode() : 0);
-//        return result;
-//    }
 }

@@ -35,14 +35,6 @@ public class PersonController {
             }
         }
 
-        // solution:
-//        Iterator<Person> iterator = people.iterator();
-//        while (iterator.hasNext()) {
-//            if(iterator.next().getBirthday().after(referenceDate)) {
-//                iterator.remove();
-//            }
-//        }
-
         return people;
     }
 

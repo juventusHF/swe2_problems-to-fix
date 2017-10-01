@@ -9,11 +9,6 @@ import java.util.List;
 public class Calculations {
 
     public double divide (double a, double b) {
-
-        // Solution:
-//        DecimalFormat df2 = new DecimalFormat("###.##");
-//        return Double.valueOf(df2.format(a/b));
-
         return a/b;
     }
 
@@ -34,8 +29,6 @@ public class Calculations {
         while (i < accounts.size()) {
             i++;
             total += accounts.get(i).getBalance();
-            //Solution
-//            i++;
         }
 
         return total;
@@ -44,8 +37,6 @@ public class Calculations {
     public int countErrors (List<String> data) {
         int errorCount = 0;
 
-        // Solution
-        // for (int i = 0; i < data.size(); i++) {
         for (int i = 0; i <= data.size(); i++) {
             if(data.get(i).contains("error")) {
                 errorCount++;

@@ -1,15 +1,12 @@
 package ch.juventus.se.problemstofix.calc;
 
-import ch.juventus.se.problemstofix.calc.Calculations;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import static junit.framework.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 /**
  * Created by t372017 on 14.09.2017.
