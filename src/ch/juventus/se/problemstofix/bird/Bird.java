@@ -6,8 +6,6 @@ package ch.juventus.se.problemstofix.bird;
  */
 public abstract class Bird {
 
-    private int testline;
-
     private int age;
     private double weight;
     private boolean isHeathy;
