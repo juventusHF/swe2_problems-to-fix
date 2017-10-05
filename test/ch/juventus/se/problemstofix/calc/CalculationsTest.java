@@ -72,7 +72,7 @@ public class CalculationsTest {
     @Test
     public void shouldReturnZero () {
         Double result = c.exponentiate(null, 2);
-        assertEquals(0, result);
+        assertEquals(0d, result);
     }
 
 }
