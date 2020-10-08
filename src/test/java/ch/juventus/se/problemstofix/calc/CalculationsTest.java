@@ -74,7 +74,7 @@ public class CalculationsTest {
     @Test
     public void shouldDoExponentiation() {
         // when
-        Double result = c.exponentiate(2d, 2);
+        Double result = c.exponential(2d, 2);
 
         // then
         assertEquals(4d, result);
@@ -83,7 +83,7 @@ public class CalculationsTest {
     @Test
     public void shouldReturnZero () {
         // when
-        Double result = c.exponentiate(null, 2);
+        Double result = c.exponential(null, 2);
 
         // then
         assertEquals(0d, result);

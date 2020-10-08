@@ -1,9 +1,8 @@
 package ch.juventus.se.problemstofix.bird;
 
-/**
- * @author: Linda Krüger
- * @since: 21.09.17
- */
+
+import java.util.Objects;
+
 public class Toucan extends Bird {
 
     private String habitat;
@@ -30,7 +29,7 @@ public class Toucan extends Bird {
 
         Toucan toucan = (Toucan) o;
 
-        return habitat != null ? habitat.equals(toucan.habitat) : toucan.habitat == null;
+        return Objects.equals(habitat, toucan.habitat);
     }
 
     @Override

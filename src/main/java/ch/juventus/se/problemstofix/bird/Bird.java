@@ -1,9 +1,6 @@
 package ch.juventus.se.problemstofix.bird;
 
-/**
- * @author: Linda Krüger
- * @since: 21.09.17
- */
+
 public abstract class Bird {
 
     private int age;

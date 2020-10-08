@@ -1,9 +1,8 @@
 package ch.juventus.se.problemstofix.bird;
 
-/**
- * @author: Linda Krüger
- * @since: 21.09.17
- */
+
+import java.util.Objects;
+
 public class Pigeon extends Bird {
 
     private String name;
@@ -30,7 +29,7 @@ public class Pigeon extends Bird {
 
         Pigeon pigeon = (Pigeon) o;
 
-        return name != null ? name.equals(pigeon.name) : pigeon.name == null;
+        return Objects.equals(name, pigeon.name);
     }
 
     @Override

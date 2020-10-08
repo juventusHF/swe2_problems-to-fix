@@ -1,9 +1,8 @@
 package ch.juventus.se.problemstofix.bird;
 
-/**
- * @author: Linda Krüger
- * @since: 21.09.17
- */
+
+import java.util.Objects;
+
 public class Turkey extends Bird {
 
     private String color;
@@ -30,7 +29,7 @@ public class Turkey extends Bird {
 
         Turkey turkey = (Turkey) o;
 
-        return color != null ? color.equals(turkey.color) : turkey.color == null;
+        return Objects.equals(color, turkey.color);
     }
 
     @Override

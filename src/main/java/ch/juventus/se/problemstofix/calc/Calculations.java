@@ -2,18 +2,15 @@ package ch.juventus.se.problemstofix.calc;
 
 import java.util.List;
 
-/**
- * @author: Linda Krüger
- * @since: 12.09.17
- */
+
 public class Calculations {
 
     public double divide (double a, double b) {
         return a/b;
     }
 
-    public Double exponentiate (Double value, int exponent) {
-        Double result = new Double(value);
+    public Double exponential(Double value, int exponent) {
+        Double result = value;
 
         for(int i = 0; i < exponent; i++) {
             result = result*value;
