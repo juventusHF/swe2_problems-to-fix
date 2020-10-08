@@ -1,7 +1,7 @@
 package ch.juventus.se.problemstofix.person;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,12 +9,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * Created by t372017 on 14.09.2017.
- */
+
 public class PersonTest {
 
     private Person p1;
@@ -23,7 +21,7 @@ public class PersonTest {
     private PersonMapper personMapper;
     private SimpleDateFormat dateFormat;
 
-    @Before
+    @BeforeEach
     public void setup () {
 
         personController = new PersonController();
@@ -46,27 +44,40 @@ public class PersonTest {
 
     @Test
     public void shouldReturnCorrectString () {
+        // given
         String expectedOutput = "Person{firstName='Hans', lastName='Muster', birthday=Mon Nov 26 00:00:00 CET 1990, address=Address{street='Rötelsteig', houseNr=10, plz=8037, city='Zürich', country='CH'}, balance=7896.5, sex=MALE, hasKids=true}";
-        assertEquals("Return of toString not as expected.", expectedOutput, p1.toString());
+
+        // when
+        String actualOutput = p1.toString();
+
+        // then
+        assertEquals(expectedOutput, actualOutput, "Return of toString not as expected.");
     }
 
     @Test
     public void personsShouldBeEquals() {
-        assertTrue("Persons p1 " + p1.toString() + " is not equals to p2 " + p2.toString(), p1.equals(p2));
+        // when
+        boolean personsAreEqual = p1.equals(p2);
+
+        // then
+        assertTrue(personsAreEqual, "Persons p1 " + p1.toString() + " is not equals to p2 " + p2.toString());
     }
 
     @Test
     public void shouldMapPersonToStudent () {
+        // when
         Student student = personMapper.mapPersonToStudent(p1);
 
-        assertEquals("First name is not equals", p1.getFirstName(), student.getFirstName());
-        assertEquals("Last name is not equals", p1.getLastName(), student.getLastName());
-        assertEquals("City is not equals", p1.getAddress(), student.getAddress());
-        assertEquals("Birthday is not equals", p1.getBirthday(), student.getBirthday());
+        // then
+        assertEquals(p1.getFirstName(), student.getFirstName(), "First name is not equals");
+        assertEquals(p1.getLastName(), student.getLastName(), "Last name is not equals");
+        assertEquals(p1.getAddress(), student.getAddress(), "City is not equals");
+        assertEquals(p1.getBirthday(), student.getBirthday(), "Birthday is not equals");
     }
 
     @Test
     public void shouldRemoveAllLindas () {
+        // given
         List<Person> people = new ArrayList<>();
         people.add(new Person("Linda", null, null, null, null, null, null));
         people.add(new Person("Andreas", null, null, null, null, null, null));
@@ -76,11 +87,16 @@ public class PersonTest {
         people.add(new Person("Jonathan", null, null, null, null, null, null));
         people.add(new Person("Noel", null, null, null, null, null, null));
 
-        assertEquals("Size of returned list is not as expected", 6, personController.removeAllLindas(people).size());
+        // when
+        List<Person> filteredList = personController.removeAllLindas(people);
+
+        // then
+        assertEquals(6, filteredList.size(), "Size of returned list is not as expected");
     }
 
     @Test
     public void shouldRemoveAllUnderaged () {
+        // given
         List<Person> people = new ArrayList<>();
         people.add(new Person(null, null, new Date(711842400000l), null, null, null, null));
         people.add(new Person(null, null, new Date(932680800000l), null, null, null, null));
@@ -90,11 +106,16 @@ public class PersonTest {
         people.add(new Person(null, null, new Date(238460400000l), null, null, null, null));
         people.add(new Person(null, null, new Date(1248300000000l), null, null, null, null));
 
-        assertEquals("Size of returned list is not as expected", 4, personController.removeAllUnderage(people).size());
+        // when
+        List<Person> filteredList = personController.removeAllUnderage(people);
+
+        // then
+        assertEquals(4, filteredList.size(), "Size of returned list is not as expected");
     }
 
     @Test
     public void shouldRemoveAllWithLetterAInLastName () {
+        // given
         List<Person> people = new ArrayList<>();
         people.add(new Person(null, "Krueger", null, null, null, null, null));
         people.add(new Person(null, "Frick", null, null, null, null, null));
@@ -104,6 +125,10 @@ public class PersonTest {
         people.add(new Person(null, "Werren", null, null, null, null, null));
         people.add(new Person(null, "Widmer", null, null, null, null, null));
 
-        assertEquals("Size of returned list is not as expected", 6, personController.removeAllWitLetterAInName(people).size());
+        // when
+        List<Person> filteredList = personController.removeAllWitLetterAInName(people);
+
+        // then
+        assertEquals(6, filteredList.size(), "Size of returned list is not as expected");
     }
 }

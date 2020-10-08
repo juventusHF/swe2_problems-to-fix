@@ -1,13 +1,12 @@
 package ch.juventus.se.problemstofix.bird;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static junit.framework.Assert.assertEquals;
 
-/**
- * Created by t372017 on 14.09.2017.
- */
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 public class BirdsTest {
 
     private BirdController birdController;
@@ -16,7 +15,7 @@ public class BirdsTest {
     private Bird toucan;
     private Bird turkey;
 
-    @Before
+    @BeforeEach
     public void setup () {
         birdController = new BirdController();
         duck = new Duck(2, 500, true);
@@ -27,6 +26,7 @@ public class BirdsTest {
 
     @Test
     public void shouldAddAllBirds () {
+        // given
         birdController.addBird(duck);
         birdController.addBird(pigeon);
         birdController.addBird(toucan);
@@ -36,7 +36,11 @@ public class BirdsTest {
         birdController.addBird(pigeon);
         birdController.addBird(turkey);
 
-        assertEquals("Count of birds not as expected.", 8, birdController.getBirdsCount());
+        // when
+        int birdsCount = birdController.getBirdsCount();
+
+        // then
+        assertEquals(8, birdsCount, "Count of birds not as expected.");
     }
 
 
