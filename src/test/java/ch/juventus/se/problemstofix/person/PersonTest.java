@@ -19,7 +19,6 @@ public class PersonTest {
     private Person p2;
     private PersonController personController;
     private PersonMapper personMapper;
-    private SimpleDateFormat dateFormat;
 
     @BeforeEach
     public void setup () {
@@ -27,7 +26,7 @@ public class PersonTest {
         personController = new PersonController();
         personMapper = new PersonMapper();
 
-        dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String date = "1990-11-26";
         Date birthday = null;
         try {
@@ -98,19 +97,19 @@ public class PersonTest {
     public void shouldRemoveAllUnderaged () {
         // given
         List<Person> people = new ArrayList<>();
-        people.add(new Person(null, null, new Date(711842400000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(932680800000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(964303200000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(806450400000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(1058911200000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(238460400000l), null, null, null, null));
-        people.add(new Person(null, null, new Date(1248300000000l), null, null, null, null));
+        people.add(new Person(null, null, new Date(711842400000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(932680800000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(964303200000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(806450400000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(1279756800000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(238460400000L), null, null, null, null));
+        people.add(new Person(null, null, new Date(1248300000000L), null, null, null, null));
 
         // when
         List<Person> filteredList = personController.removeAllUnderage(people);
 
         // then
-        assertEquals(4, filteredList.size(), "Size of returned list is not as expected");
+        assertEquals(5, filteredList.size(), "Size of returned list is not as expected");
     }
 
     @Test
