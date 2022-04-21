@@ -1,15 +1,18 @@
 package ch.juventus.se.problemstofix.bird;
 
 
+import java.util.Objects;
+
 public abstract class Bird {
 
     private int age;
     private double weight;
-    private boolean isHeathy;
-    private int id;
+    private boolean isHealthy;
 
-    public Bird(int id) {
-        this.id = id;
+    public Bird(int age, double weight, boolean isHealthy) {
+        this.age = age;
+        this.weight = weight;
+        this.isHealthy = isHealthy;
     }
 
     public int getAge() {
@@ -28,44 +31,24 @@ public abstract class Bird {
         this.weight = weight;
     }
 
-    public boolean isHeathy() {
-        return isHeathy;
+    public boolean isHealthy() {
+        return isHealthy;
     }
 
-    public void setHeathy(boolean heathy) {
-        isHeathy = heathy;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setHealthy(boolean healthy) {
+        isHealthy = healthy;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Bird bird = (Bird) o;
-
-        if (age != bird.age) return false;
-        if (Double.compare(bird.weight, weight) != 0) return false;
-        if (isHeathy != bird.isHeathy) return false;
-        return id == bird.id;
+        return age == bird.age && Double.compare(bird.weight, weight) == 0 && isHealthy == bird.isHealthy;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = age;
-        temp = Double.doubleToLongBits(weight);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (isHeathy ? 1 : 0);
-        result = 31 * result + id;
-        return result;
+        return Objects.hash(age, weight, isHealthy);
     }
 }

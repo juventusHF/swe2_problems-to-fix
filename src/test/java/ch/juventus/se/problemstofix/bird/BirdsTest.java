@@ -18,10 +18,10 @@ public class BirdsTest {
     @BeforeEach
     public void setup () {
         birdController = new BirdController();
-        duck = new Duck(2, 500, true);
-        pigeon = new Pigeon(1, 300, false);
-        toucan = new Toucan(3, 400, true);
-        turkey = new Turkey(2, 800, true);
+        duck = new Duck(2, 500, true, true);
+        pigeon = new Pigeon(1, 300, false, "Fred");
+        toucan = new Toucan(3, 400, true, null);
+        turkey = new Turkey(2, 800, true, "red");
     }
 
     @Test

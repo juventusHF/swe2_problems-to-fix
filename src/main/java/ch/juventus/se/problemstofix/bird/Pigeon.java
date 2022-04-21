@@ -7,10 +7,9 @@ public class Pigeon extends Bird {
 
     private String name;
 
-    public Pigeon(int age, double weight, boolean isHealthy) {
-        super(age);
-        this.setWeight(weight);
-        this.setHeathy(isHealthy);
+    public Pigeon(int age, double weight, boolean isHealthy, String name) {
+        super(age, weight, isHealthy);
+        this.name = name;
     }
 
     public String getName() {
@@ -26,16 +25,12 @@ public class Pigeon extends Bird {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-
         Pigeon pigeon = (Pigeon) o;
-
         return Objects.equals(name, pigeon.name);
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
+        return Objects.hash(super.hashCode(), name);
     }
 }

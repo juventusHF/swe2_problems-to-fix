@@ -7,10 +7,9 @@ public class Turkey extends Bird {
 
     private String color;
 
-    public Turkey(int age, double weight, boolean isHealthy) {
-        super(age);
-        this.setWeight(weight);
-        this.setHeathy(isHealthy);
+    public Turkey(int age, double weight, boolean isHealthy, String color) {
+        super(age, weight, isHealthy);
+        this.color = color;
     }
 
     public String getColor() {
@@ -26,16 +25,12 @@ public class Turkey extends Bird {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-
         Turkey turkey = (Turkey) o;
-
         return Objects.equals(color, turkey.color);
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (color != null ? color.hashCode() : 0);
-        return result;
+        return Objects.hash(super.hashCode(), color);
     }
 }

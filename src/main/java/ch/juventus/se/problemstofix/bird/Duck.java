@@ -1,14 +1,15 @@
 package ch.juventus.se.problemstofix.bird;
 
 
+import java.util.Objects;
+
 public class Duck extends Bird{
 
     private boolean isHungry;
 
-    public Duck(int age, double weight, boolean isHealthy) {
-        super(age);
-        this.setWeight(weight);
-        this.setHeathy(isHealthy);
+    public Duck(int age, double weight, boolean isHealthy, boolean isHungry) {
+        super(age, weight, isHealthy);
+        this.isHungry = isHungry;
     }
 
     public boolean isHungry() {
@@ -24,16 +25,12 @@ public class Duck extends Bird{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-
         Duck duck = (Duck) o;
-
         return isHungry == duck.isHungry;
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (isHungry ? 1 : 0);
-        return result;
+        return Objects.hash(super.hashCode(), isHungry);
     }
 }
