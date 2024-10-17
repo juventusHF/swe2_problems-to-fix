@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public class CalculationsTest {
+public class CalculatorTest {
 
-    private Calculations c;
+    private Calculator calculator;
     private BankAccount bankAccount;
     private List<BankAccount> accounts;
     private List<String> textData;
 
     @BeforeEach
     public void setup () {
-        c = new Calculations();
+        calculator = new Calculator();
         bankAccount = new BankAccount(100.00);
         accounts = new ArrayList<>();
         textData = new ArrayList<>();
@@ -28,7 +28,7 @@ public class CalculationsTest {
     @Test
     public void shouldDivideAndRound () {
         // when
-        double result = c.divide(33, 5.2);
+        double result = calculator.divide(33, 5.2);
 
         // then
         assertEquals(6.35, result, "Result of division not as expected.");
@@ -41,7 +41,7 @@ public class CalculationsTest {
         accounts.add(new BankAccount(100.00));
 
         // when
-        double total = c.countTotal(accounts);
+        double total = calculator.countTotal(accounts);
 
         // then
         assertEquals(156.00, total, "Total of all bank accounts is not correct");
@@ -60,7 +60,7 @@ public class CalculationsTest {
         textData.add("error");
 
         // when
-        int errorCount = c.countErrors(textData);
+        int errorCount = calculator.countErrors(textData);
 
         // then
         assertEquals(3, errorCount, "Error count not correct!");
@@ -74,7 +74,7 @@ public class CalculationsTest {
     @Test
     public void shouldDoExponentiation() {
         // when
-        Double result = c.exponential(2d, 2);
+        Double result = calculator.exponential(2d, 2);
 
         // then
         assertEquals(4d, result);
@@ -83,7 +83,7 @@ public class CalculationsTest {
     @Test
     public void shouldReturnZero () {
         // when
-        Double result = c.exponential(null, 2);
+        Double result = calculator.exponential(null, 2);
 
         // then
         assertEquals(0d, result);

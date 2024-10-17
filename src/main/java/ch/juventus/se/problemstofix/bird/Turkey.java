@@ -5,18 +5,10 @@ import java.util.Objects;
 
 public class Turkey extends Bird {
 
-    private String color;
+    private final String color;
 
     public Turkey(int age, double weight, boolean isHealthy, String color) {
         super(age, weight, isHealthy);
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
         this.color = color;
     }
 

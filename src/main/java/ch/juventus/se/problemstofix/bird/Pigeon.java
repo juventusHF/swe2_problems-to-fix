@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Pigeon extends Bird {
 
-    private String name;
+    private final String name;
 
     public Pigeon(int age, double weight, boolean isHealthy, String name) {
         super(age, weight, isHealthy);
@@ -14,10 +14,6 @@ public class Pigeon extends Bird {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

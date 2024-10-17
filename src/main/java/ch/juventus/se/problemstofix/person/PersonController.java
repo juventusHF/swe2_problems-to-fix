@@ -1,7 +1,6 @@
 package ch.juventus.se.problemstofix.person;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,13 +20,10 @@ public class PersonController {
 
     public List<Person> removeAllUnderage (List<Person> people) {
 
-        Calendar cal = Calendar.getInstance();
-        Date today = cal.getTime();
-        cal.add(Calendar.YEAR, -18);
-        Date referenceDate = cal.getTime();
+        LocalDate today = LocalDate.now();
 
         for(Person person : people) {
-            if(person.getBirthday().after(referenceDate)) {
+            if(person.getBirthday().isAfter(today.minusYears(18))) {
                 people.remove(person);
             }
         }

@@ -1,13 +1,13 @@
 package ch.juventus.se.problemstofix.person;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class Student {
 
     private String firstName;
     private String lastName;
-    private Date birthday;
+    private LocalDate birthday;
     private Address address;
 
     public String getFirstName() {
@@ -26,11 +26,11 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

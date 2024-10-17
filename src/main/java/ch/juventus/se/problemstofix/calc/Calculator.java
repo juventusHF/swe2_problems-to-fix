@@ -3,7 +3,7 @@ package ch.juventus.se.problemstofix.calc;
 import java.util.List;
 
 
-public class Calculations {
+public class Calculator {
 
     public double divide (double a, double b) {
         return a/b;
@@ -13,7 +13,7 @@ public class Calculations {
         Double result = value;
 
         for(int i = 0; i < exponent; i++) {
-            result = result*value;
+            result = result * value;
         }
 
         return result;

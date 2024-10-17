@@ -5,38 +5,14 @@ import java.util.Objects;
 
 public abstract class Bird {
 
-    private int age;
-    private double weight;
-    private boolean isHealthy;
+    private final int age;
+    private final double weight;
+    private final boolean isHealthy;
 
     public Bird(int age, double weight, boolean isHealthy) {
         this.age = age;
         this.weight = weight;
         this.isHealthy = isHealthy;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public boolean isHealthy() {
-        return isHealthy;
-    }
-
-    public void setHealthy(boolean healthy) {
-        isHealthy = healthy;
     }
 
     @Override

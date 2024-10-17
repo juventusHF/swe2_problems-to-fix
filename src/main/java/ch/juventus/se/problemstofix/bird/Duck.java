@@ -5,19 +5,11 @@ import java.util.Objects;
 
 public class Duck extends Bird{
 
-    private boolean isHungry;
+    private final boolean isHungry;
 
     public Duck(int age, double weight, boolean isHealthy, boolean isHungry) {
         super(age, weight, isHealthy);
         this.isHungry = isHungry;
-    }
-
-    public boolean isHungry() {
-        return isHungry;
-    }
-
-    public void setHungry(boolean hungry) {
-        isHungry = hungry;
     }
 
     @Override

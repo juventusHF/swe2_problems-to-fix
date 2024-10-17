@@ -5,20 +5,12 @@ import java.util.Objects;
 
 public class Toucan extends Bird {
 
-    private String habitat;
+    private final String habitat;
 
     public Toucan(int age, double weight, boolean isHealthy, String habitat) {
         super(age, weight, isHealthy);
         this.habitat = habitat;
 
-    }
-
-    public String getHabitat() {
-        return habitat;
-    }
-
-    public void setHabitat(String habitat) {
-        this.habitat = habitat;
     }
 
     @Override

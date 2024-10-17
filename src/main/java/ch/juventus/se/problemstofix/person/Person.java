@@ -1,6 +1,6 @@
 package ch.juventus.se.problemstofix.person;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class Person {
@@ -9,13 +9,13 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private Date birthday;
+    private LocalDate birthday;
     private Address address;
     private Double balance;
     private Sex sex;
     private Boolean hasKids;
 
-    public Person(String firstName, String lastName, Date birthday, Address address, Double balance, Sex sex, Boolean hasKids) {
+    public Person(String firstName, String lastName, LocalDate birthday, Address address, Double balance, Sex sex, Boolean hasKids) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
@@ -23,6 +23,15 @@ public class Person {
         this.balance = balance;
         this.sex = sex;
         this.hasKids = hasKids;
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Person(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public String getFirstName() {
@@ -41,11 +50,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
