@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class PersonController {
+public class PersonService {
 
     public List<Person> removeAllLindas (List<Person> people) {
         Iterator<Person> iterator = people.iterator();

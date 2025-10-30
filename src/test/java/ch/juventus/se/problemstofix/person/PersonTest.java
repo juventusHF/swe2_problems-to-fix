@@ -15,13 +15,13 @@ public class PersonTest {
 
     private Person p1;
     private Person p2;
-    private PersonController personController;
+    private PersonService personService;
     private PersonMapper personMapper;
 
     @BeforeEach
     public void setup () {
 
-        personController = new PersonController();
+        personService = new PersonService();
         personMapper = new PersonMapper();
 
         Address address = new Address("Rötelsteig", 10, 8037, "Zürich", "CH");
@@ -43,7 +43,7 @@ public class PersonTest {
     }
 
     @Test
-    public void personsShouldBeEquals() {
+    public void peopleShouldBeEquals() {
         // when
         boolean personsAreEqual = p1.equals(p2);
 
@@ -76,7 +76,7 @@ public class PersonTest {
         people.add(new Person("Noel", null));
 
         // when
-        List<Person> filteredList = personController.removeAllLindas(people);
+        List<Person> filteredList = personService.removeAllLindas(people);
 
         // then
         assertEquals(6, filteredList.size(), "Size of returned list is not as expected");
@@ -95,7 +95,7 @@ public class PersonTest {
         people.add(new Person(LocalDate.of(1990, 1, 1)));
 
         // when
-        List<Person> filteredList = personController.removeAllUnderage(people);
+        List<Person> filteredList = personService.removeAllUnderage(people);
 
         // then
         assertEquals(4, filteredList.size(), "Size of returned list is not as expected");
@@ -114,7 +114,7 @@ public class PersonTest {
         people.add(new Person(null, "Widmer"));
 
         // when
-        List<Person> filteredList = personController.removeAllWitLetterAInName(people);
+        List<Person> filteredList = personService.removeAllWitLetterAInName(people);
 
         // then
         assertEquals(6, filteredList.size(), "Size of returned list is not as expected");
